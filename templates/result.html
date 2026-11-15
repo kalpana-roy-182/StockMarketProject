@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediction Result</title>
+
+<style>
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.card{
+background:white;
+width:500px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+h1{
+color:#2563eb;
+}
+
+.result{
+font-size:36px;
+font-weight:bold;
+color:#16a34a;
+margin:25px 0;
+}
+
+p{
+color:#64748b;
+margin-bottom:20px;
+}
+
+a{
+text-decoration:none;
+background:#2563eb;
+color:white;
+padding:12px 25px;
+border-radius:10px;
+}
+
+a:hover{
+background:#1d4ed8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>📈 Stock Price Prediction</h1>
+
+<p>Predicted Stock Price for Year <b>{{ year }}</b></p>
+
+<div class="result">
+₹ {{ prediction }}
+</div>
+
+<a href="/">📊 Predict Again</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Market Prediction</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+}
+
+.container{
+width:650px;
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+.header{
+text-align:center;
+margin-bottom:25px;
+}
+
+.logo{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.header h1{
+color:#1e3a8a;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#64748b;
+}
+
+.formula{
+background:#eff6ff;
+padding:15px;
+border-left:5px solid #2563eb;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.formula h3{
+color:#2563eb;
+margin-bottom:8px;
+}
+
+.formula p{
+font-weight:bold;
+color:#1e293b;
+}
+
+label{
+display:block;
+margin-bottom:5px;
+font-weight:bold;
+color:#1e293b;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:5px;
+border:1px solid #d1d5db;
+border-radius:10px;
+font-size:15px;
+}
+
+input:focus{
+outline:none;
+border-color:#2563eb;
+}
+
+button{
+width:100%;
+padding:14px;
+margin-top:25px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.info{
+display:flex;
+justify-content:space-between;
+margin-top:25px;
+}
+
+.card{
+width:30%;
+background:#f8fafc;
+padding:12px;
+border-radius:10px;
+text-align:center;
+}
+
+.card h3{
+color:#2563eb;
+margin-bottom:5px;
+}
+
+.card p{
+font-size:13px;
+color:#64748b;
+}
+
+.footer{
+text-align:center;
+margin-top:20px;
+font-size:13px;
+color:#6b7280;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<div class="logo">
+📈 📊
+</div>
+
+<h1>Stock Market Prediction</h1>
+
+<p class="subtitle">
+Predict Future Stock Prices Using Polynomial Regression
+</p>
+
+</div>
+
+<div class="formula">
+
+<h3>📊 Prediction Model</h3>
+
+<p>
+Price = β₀ + β₁(Year) + β₂(Year²)
+</p>
+
+</div>
+
+<form action="/predict" method="POST">
+
+<label>📅 Enter Future Year</label>
+
+<input
+type="number"
+name="year"
+placeholder="Example: 2030"
+required>
+
+<button type="submit">
+📈 Predict Stock Price
+</button>
+
+</form>
+
+<div class="info">
+
+<div class="card">
+<h3>📈 Stock</h3>
+<p>Historical Prices</p>
+</div>
+
+<div class="card">
+<h3>📊 Analysis</h3>
+<p>Polynomial Model</p>
+</div>
+
+<div class="card">
+<h3>💹 Trend</h3>
+<p>Future Prediction</p>
+</div>
+
+</div>
+
+<div class="footer">
+Flask • Machine Learning • Polynomial Regression
+</div>
+
+</div>
+
+</body>
+</html>
